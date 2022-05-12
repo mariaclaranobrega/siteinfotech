@@ -1,0 +1,107 @@
+*{
+    margin:0;
+    padding:0;
+}
+
+#produtos{
+    width:81%;
+    display:flex;
+    flex-direction:column;
+    margin:0 auto;
+    padding:2rem;
+    border: 0.2rem solid lightgrey;
+    border-radius: 5%;
+}
+
+#produtos_trio_row1,#produtos_trio_row2,#produtos_trio_row3{
+    display: flex;
+    flex-direction: row;
+    justify-content:space-evenly;
+    align-items:flex-end;
+}
+
+#produtos_trio_row1 img,#produtos_trio_row2 img,#produtos_trio_row3 img{
+    width:8rem;
+    heigth:8rem;
+}
+
+#produtos_trio_row1 div,#produtos_trio_row2 div,#produtos_trio_row3 div{
+    width:27%;
+    height: 382px;
+    margin: 2rem 2rem;
+    padding:0;
+    border: 0.05rem
+    border-radius:5%;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    color:lightgrey;
+}
+
+.input-date{
+    background: LightBlue;
+}
+
+#produtos_trio_row1 div .ul-comprar,#produtos_trio_row2 div .ul-comprar,#produtos_trio_row3 div .ul-comprar{
+    display:absolute;
+    margin-top:0;
+    padding-top:0;
+    list-style-type: none;
+    background: #FFEEEE;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to left, #DDEFBB, #FFEEEE);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to left, #DDEFBB, #FFEEEE); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    border-radius: 2.5%;
+}
+
+
+
+
+
+#white:hover{
+    color:white;
+}
+
+
+
+#produtos-f{
+    display: flex;
+    flex-direction: row;
+    justify-content:space-evenly;
+    align-items:flex-end;
+    overflow-x:auto;
+}
+
+#produtos-f img{
+    width:10rem;
+    heigth:10rem;
+}
+
+#produtos-f div{
+    width:100%;
+    height: 100%;
+    margin: 2rem 2rem;
+    padding:0;
+    border: 0.05rem solid lightgrey;
+    border-radius:5%;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    color:lightgrey;
+}
+
+::-webkit-scrollbar-track {
+    background-color: #F4F4F4;
+}
+::-webkit-scrollbar {
+    width: 7px;
+    height: 7px;
+    background: #F4F4F4;
+}
+::-webkit-scrollbar-thumb {
+    background: #dad7d7;
+
+}

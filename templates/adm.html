@@ -1,0 +1,193 @@
+<!doctype html>
+<html lang="pt-PT">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>INFOTECH - Administração</title>
+    <!--Link: CSS-->
+    <link rel="stylesheet" href="{{ url_for('static',filename='main.css') }}">
+    <!--Link: Bootstrap-->
+    <link rel="stylesheet" href="{{ url_for('static',filename='bootstrap.min.css') }}">
+</head>
+<body>
+<!--Barra de navegação-->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="/" target="_blank">Voltar</a>
+    </div>
+</nav>
+
+<!--Cabeçalho-->
+<div style="display:flex;flex-direction:column;justify-content:center;align-items:center">
+    <h1 style="padding:0;margin:1rem 0 0 0;font-size:2rem;">INFOTECH</h1><br>
+    <h2 style="padding:0;margin:0 0 1rem 0;">Equipamentos Informáticos</h2>
+    <h4 style="margin-top:2rem">Área da Administração</h4>
+</div>
+
+<!--Produtos-->
+<div>
+    <h4 style="margin: 2rem 0 0 0;padding-bottom:1.5rem;color:black;text-align:center">PRODUTOS</h4>
+
+    <!--Primeiro trio-->
+    <div id="produtos_trio_row1">
+        <!--Primeiro produto-->
+        <div style="padding:2rem">
+            <a href="#"><img src="{{ url_for('static',filename='images/p1.png') }}" alt="Produto: Rato"></a>
+            <p style="padding:0;margin:0"><i>RATO ASUS CERBERUS GAMING <br>MOUSE</i></p>
+            <p style="margin-bottom:0;padding-bottom:0;color:white;font-weight:bold">SOLICITAR AO FORNECEDOR</p>
+            <div style="padding:0;width:80%;margin-bottom:0" class="ul-comprar">
+                <p style="color:black">Digite a quantidade:</p>
+                <!--Enviar esta informação para o método que solicita este artigo ao fornecedor-->
+                <form action="/solicitar-RATO01" method="POST"><input type="number" name="quantidade_RATO01"
+                                                                      class="input-number" required/>
+                    <button type="submit" class="btn btn-success btn-sm">ENVIAR</button>
+                </form>
+            </div>
+        </div>
+
+        <!--Segundo produto-->
+        <div style="padding:2rem">
+            <a href="#"><img src="{{ url_for('static',filename='images/p2.png') }}" alt="Produto: Notebook"></a>
+            <p style="padding-top:2rem;margin-bottom:0"><i>HP ELITEBOOK 840 G8 COMPUTADOR <br>PORTÁTIL 35,6 CM (14")</i>
+            </p>
+            <p style="margin-bottom:0;padding-bottom:0;color:white;font-weight:bold">SOLICITAR AO FORNECEDOR</p>
+            <div style="padding:0;width:80%;margin-bottom:0" class="ul-comprar">
+                <p style="color:black">Digite a quantidade:</p>
+                <!--Enviar esta informação para o método que solicita este artigo ao fornecedor-->
+                <form action="/solicitar-NOTEBOOK01" method="POST"><input type="number" name="quantidade_NOTEBOOK01"
+                                                                          class="input-number" required/>
+                    <button type="submit" class="btn btn-success btn-sm">ENVIAR</button>
+                </form>
+            </div>
+        </div>
+
+        <!--Terceiro produto-->
+        <div style="padding:2rem">
+            <a href="#"><img src="{{ url_for('static',filename='images/p3.png') }}" alt="Produto: Router"></a>
+            <p style="padding:0;margin:0"><i>TP-LINK TL-R605 ROUTER</i></p>
+            <p style="margin-bottom:0;padding-bottom:0;color:white;font-weight:bold">SOLICITAR AO FORNECEDOR</p>
+            <div style="padding:0;width:80%;margin-bottom:0" class="ul-comprar">
+                <p style="color:black">Digite a quantidade:</p>
+                <!--Enviar esta informação para o método que solicita este artigo ao fornecedor-->
+                <form action="/solicitar-ROUTER01" method="POST"><input type="number" name="quantidade_ROUTER01"
+                                                                        class="input-number" required/>
+                    <button type="submit" class="btn btn-success btn-sm">ENVIAR</button>
+                </form>
+            </div>
+        </div>
+
+    </div>
+
+    <!--Segundo trio-->
+    <div id="produtos_trio_row2">
+        <!--Quarto produto-->
+        <div style="padding:2rem">
+            <a href="#"><img src="{{ url_for('static',filename='images/p4.png') }}" alt="Produto: Monitor"></a>
+            <p style="padding:0;margin:0"><i>AOC G2 Q27G2U/BK MONITOR DE <br>ECRÃ 68,6 CM (27")</i></p>
+            <p style="margin-bottom:0;padding-bottom:0;color:white;font-weight:bold">SOLICITAR AO FORNECEDOR</p>
+            <div style="padding:0;width:80%;margin-bottom:0" class="ul-comprar">
+                <p style="color:black">Digite a quantidade:</p>
+                <!--Enviar esta informação para o método que solicita este artigo ao fornecedor-->
+                <form action="/solicitar-MONITOR01" method="POST"><input name="quantidade_MONITOR01" type="number"
+                                                                         class="input-number" required/>
+                    <button type="submit" class="btn btn-success btn-sm">ENVIAR</button>
+                </form>
+            </div>
+        </div>
+
+        <!--Quinto produto-->
+        <div style="padding:2rem">
+            <a href="#"><img src="{{ url_for('static',filename='images/p5.png') }}" alt="Produto: Processador"></a>
+            <p style="padding:0;margin:0"><i>INTEL CORE I7-10700F <br>PROCESSADOR</i></p>
+            <p style="margin-bottom:0;padding-bottom:0;color:white;font-weight:bold">SOLICITAR AO FORNECEDOR</p>
+            <div style="padding:0;width:80%;margin-bottom:0" class="ul-comprar">
+                <p style="color:black">Digite a quantidade:</p>
+                <!--Enviar esta informação para o método que solicita este artigo ao fornecedor-->
+                <form action="/solicitar-PROCESSADOR01" method="POST"><input name="quantidade_PROCESSADOR01"
+                                                                             type="number" class="input-number"
+                                                                             required/>
+                    <button type="submit" class="btn btn-success btn-sm">ENVIAR</button>
+                </form>
+            </div>
+        </div>
+
+        <!--Sexto produto-->
+        <div style="padding:2rem">
+            <a href="#"><img src="{{ url_for('static',filename='images/p6.png') }}" alt="Produto: Docas"></a>
+            <p style="padding:0;margin:0"><i>ACER NP.DCK11.01N BASE & <br>DUPLICADOR DE PORTAS</i></p>
+            <p style="margin-bottom:0;padding-bottom:0;color:white;font-weight:bold">SOLICITAR AO FORNECEDOR</p>
+            <div style="padding:0;width:80%;margin-bottom:0" class="ul-comprar">
+                <p style="color:black">Digite a quantidade:</p>
+                <!--Enviar esta informação para o método que solicita este artigo ao fornecedor-->
+                <form action="/solicitar-DOCA01" method="POST"><input name="quantidade_DOCA01" type="number"
+                                                                      class="input-number" required/>
+                    <button type="submit" class="btn btn-success btn-sm">ENVIAR</button>
+                </form>
+            </div>
+        </div>
+
+    </div>
+
+    <!--Terceiro trio-->
+    <div id="produtos_trio_row3">
+        <!--Sétimo produto-->
+        <div style="padding:2rem">
+            <a href="#"><img src="{{ url_for('static',filename='images/p7.png') }}" alt="Produto: Carregador Notebook"></a>
+            <p style="padding:0;margin:0"><i>TOOQ TQLC-90BS02M <br>CARREGADOR</i></p>
+            <p style="margin-bottom:0;padding-bottom:0;color:white;font-weight:bold">SOLICITAR AO FORNECEDOR</p>
+            <div style="padding:0;width:80%;margin-bottom:0" class="ul-comprar">
+                <p style="color:black">Digite a quantidade:</p>
+                <!--Enviar esta informação para o método que solicita este artigo ao fornecedor-->
+                <form action="/solicitar-CARREGADOR01" method="POST"><input name="quantidade_CARREGADOR01" type="number"
+                                                                            class="input-number" required/>
+                    <button type="submit" class="btn btn-success btn-sm">ENVIAR</button>
+                </form>
+            </div>
+        </div>
+
+        <!--Oitavo produto-->
+        <div style="padding:2rem">
+            <a href="#"><img src="{{ url_for('static',filename='images/p8.png') }}" alt="Produto: Iphone"></a>
+            <p style="padding:0;margin:0"><i>APPLE IPHONE 13 MINI <br>13,7 CM (5.4")</i></p>
+            <p style="margin-bottom:0;padding-bottom:0;color:white;font-weight:bold">SOLICITAR AO FORNECEDOR</p>
+            <div style="padding:0;width:80%;margin-bottom:0" class="ul-comprar">
+                <p style="color:black">Digite a quantidade:</p>
+                <!--Enviar esta informação para o método que solicita este artigo ao fornecedor-->
+                <form action="/solicitar-IPHONE01" method="POST"><input name="quantidade_IPHONE01" type="number"
+                                                                        class="input-number" required/>
+                    <button type="submit" class="btn btn-success btn-sm">ENVIAR</button>
+                </form>
+            </div>
+        </div>
+
+        <!--Nono produto-->
+        <div style="padding:2rem">
+            <a href="#"><img src="{{ url_for('static',filename='images/p9.png') }}" alt="Produto: Headsets"></a>
+            <p style="padding:0;margin:0"><i>ABKONCORE AURICULARES <br>GAMING</i></p>
+            <p style="margin-bottom:0;padding-bottom:0;color:white;font-weight:bold">SOLICITAR AO FORNECEDOR</p>
+            <div style="padding:0;width:80%;margin-bottom:0" class="ul-comprar">
+                <p style="color:black">Digite a quantidade:</p>
+                <!--Enviar esta informação para o método que solicita este artigo ao fornecedor-->
+                <form action="/solicitar-HEADSET01" method="POST"><input name="quantidade_HEADSET01" type="number"
+                                                                         class="input-number" required/>
+                    <button type="submit" class="btn btn-success btn-sm">ENVIAR</button>
+                </form>
+            </div>
+        </div>
+
+    </div>
+
+</div>
+<hr>
+<h4 style="text-align:center;">Gestão de Produtos, Compras e Vendas</h4>
+<!--Link que redireciona para a página de com tabela de gestão de produtos-->
+<h4 style="text-align:center;"><a href="/tabela-adm">Clique aqui para acessar a tabela de gestão</a></h4>
+<br>
+<br>
+
+
+
+</body>
+</html>

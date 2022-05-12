@@ -1,0 +1,128 @@
+<!doctype html>
+<html lang="pt-PT">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>INFOTECH - Equipamentos Informáticos</title>
+    <!--Link: CSS-->
+    <link rel="stylesheet" href="{{ url_for('static',filename='main.css') }}">
+    <!--Link: Bootstrap-->
+    <link rel="stylesheet" href="{{ url_for('static',filename='bootstrap.min.css') }}">
+
+</head>
+<body>
+    <!--Barra de navegação-->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="/" target="_blank">Voltar</a>
+            <a class="nav-link" href="#produtos">PRODUTOS</a>
+            <a class="nav-link" href="/login-clientes" target="_blank">Login</a>
+        </div>
+    </nav>
+
+    <!--Cabeçalho-->
+    <div style="display:flex;flex-direction:column;justify-content:center;align-items:center">
+        <h1 style="padding:0;margin:1rem 0 0 0;font-size:2rem;">INFOTECH</h1><br>
+        <h2 style="padding:0 0 2rem 0;margin:0 0 1rem 0;">Equipamentos Informáticos</h2>
+    </div>
+
+
+    <!--9 produtos: 3 em cada div, para melhor estilizar-->
+    <div id="produtos">
+        <h4 style="margin: 0 auto;padding-bottom:1.5rem;color:black">PRODUTOS</h4>
+
+        <!--Primeiro trio-->
+        <div id="produtos_trio_row1">
+            <!--Primeiro produto-->
+            <div>
+                <a href="/login-clientes"><img src="{{ url_for('static',filename='images/p1.png') }}" alt="Produto: Rato"></a>
+                <p><i>RATO ASUS CERBERUS GAMING <br>MOUSE</i></p>
+                <p style="color:black !important; font-size:1.5rem;"><b>30,00€</b></p>
+                <!--Redirecionar para o página de login de clientes-->
+                <a href="/login-clientes"><button type="button" class="btn btn-success">Para comprar, faça login</button></a>
+            </div>
+            <!--Segundo produto-->
+            <div>
+                <a href="/login-clientes"><img src="{{ url_for('static',filename='images/p2.png') }}" alt="Produto: Notebook"></a>
+                <p style="padding-top:2rem;"><i>HP ELITEBOOK 840 G8 COMPUTADOR <br>PORTÁTIL 35,6 CM (14")</i></p>
+                <p style="color:black !important;font-size:1.5rem;"><b>1390,00€</b></p>
+                <!--Redirecionar para o página de login de clientes-->
+                <a href="/login-clientes"><button type="button" class="btn btn-success">Para comprar, faça login</button></a>
+            </div>
+            <!--Terceiro produto-->
+            <div>
+                <a href="/login-clientes"><img src="{{ url_for('static',filename='images/p3.png') }}" alt="Produto: Router"></a>
+                <p><i>TP-LINK TL-R605 ROUTER</i></p>
+                <p style="color:black !important;font-size:1.5rem;"><b>47,50€</b></p>
+                <!--Redirecionar para o página de login de clientes-->
+                <a href="/login-clientes"><button type="button" class="btn btn-success">Para comprar, faça login</button></a>
+            </div>
+        </div>
+        
+        <!--Segundo trio-->
+        <div id="produtos_trio_row2">
+            <!--Quarto produto-->
+            <div>
+                <a href="/login-clientes"><img src="{{ url_for('static',filename='images/p4.png') }}" alt="Produto: Monitor"></a>
+                <p><i>AOC G2 Q27G2U/BK MONITOR DE <br>ECRÃ 68,6 CM (27")</i></p>
+                <p style="color:black !important;font-size:1.5rem;"><b>333,00€</b></p>
+                <!--Redirecionar para o página de login de clientes-->
+                <a href="/login-clientes"><button type="button" class="btn btn-success">Para comprar, faça login</button></a>
+            </div>
+            <!--Quinto produto-->
+            <div>
+                <a href="/login-clientes"><img src="{{ url_for('static',filename='images/p5.png') }}" alt="Produto: Processador"></a>
+                <p><i>INTEL CORE I7-10700F <br>PROCESSADOR</i></p>
+                <p style="color:black !important;font-size:1.5rem;"><b>255,00€</b></p>
+                <!--Redirecionar para o página de login de clientes-->
+                <a href="/login-clientes"><button type="button" class="btn btn-success">Para comprar, faça login</button></a>
+            </div>
+            <!--Sexto produto-->
+            <div>
+                <a href="/login-clientes"><img src="{{ url_for('static',filename='images/p6.png') }}" alt="Produto: Docas"></a>
+                <p><i>ACER NP.DCK11.01N BASE & <br>DUPLICADOR DE PORTAS</i></p>
+                <p style="color:black !important;font-size:1.5rem;"><b>388,99€</b></p>
+                <!--Redirecionar para o página de login de clientes-->
+                <a href="/login-clientes"><button type="button" class="btn btn-success">Para comprar, faça login</button></a>
+            </div>
+            
+        </div>
+        
+        <!--Terceiro trio-->
+        <div id="produtos_trio_row3">
+            <!--Sétimo produto-->
+            <div>
+                <a href="/login-clientes"><img src="{{ url_for('static',filename='images/p7.png') }}" alt="Produto: Carregador Notebook"></a>
+                <p><i>TOOQ TQLC-90BS02M <br>CARREGADOR</i></p>
+                <p style="color:black !important;font-size:1.5rem;"><b>18,75€</b></p>
+                <!--Redirecionar para o página de login de clientes-->
+                <a href="/login-clientes"><button type="button" class="btn btn-success">Para comprar, faça login</button></a>
+            </div>
+            <!--Oitavo produto-->
+            <div>
+                <a href="/login-clientes"><img src="{{ url_for('static',filename='images/p8.png') }}" alt="Produto: Iphone"></a>
+                <p><i>APPLE IPHONE 13 MINI <br>13,7 CM (5.4")</i></p>
+                <p style="color:black !important;font-size:1.5rem;"><b>1.125,99€</b></p>
+                <!--Redirecionar para o página de login de clientes-->
+                <a href="/login-clientes"><button type="button" class="btn btn-success">Para comprar, faça login</button></a>
+            </div>
+            <!--Nono produto-->
+            <div>
+                <a href="/login-clientes"><img src="{{ url_for('static',filename='images/p9.png') }}" alt="Produto: Headsets"></a>
+                <p><i>ABKONCORE AURICULARES <br>GAMING</i></p>
+                <p style="color:black !important;font-size:1.5rem;"><b>30,00€</b></p>
+                <!--Redirecionar para o página de login de clientes-->
+                <a href="/login-clientes"><button type="button" class="btn btn-success">Para comprar, faça login</button></a>
+            </div>
+            
+        </div>
+        
+        
+    </div>
+
+
+
+</body>
+</html>

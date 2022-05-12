@@ -1,0 +1,157 @@
+<!doctype html>
+<html lang="pt-PT">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>INFOTECH - Administração</title>
+    <!--Link: CSS-->
+    <link rel="stylesheet" href="{{ url_for('static',filename='main.css') }}">
+    <!--Link: Bootstrap-->
+    <link rel="stylesheet" href="{{ url_for('static',filename='bootstrap.min.css') }}">
+</head>
+<body>
+<!--Barra de navegação-->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container-fluid">
+    </div>
+</nav>
+
+<!--Cabeçalho-->
+<div style="display:flex;flex-direction:column;justify-content:center;align-items:center">
+    <h1 style="padding:0;margin:1rem 0 0 0;font-size:2rem;">INFOTECH</h1><br>
+    <h2 style="padding:0;margin:0 0 1rem 0;">Equipamentos Informáticos</h2>
+    <h4 style="margin-top:2rem">Área da Administração</h4>
+</div>
+    <!--Tabela de Produtos-->
+    <div style="width:90%;height:400px;overflow:auto;display:flex;margin:auto">
+        <!--Coluna 1-->
+        <table class="table table-hover table-active">
+            <thead>
+            <tr><th scope="col" style="height:7rem;display:flex;justify-content:center;align-items:center">Código Produto</th></tr>
+            </thead>
+            <tbody>
+            <!--Percorrer a tabela de produtos, e cada linha desta coluna estará o resultado da primeira coluna do banco de dados-->
+            {% for i in tabelaadm %}
+            <tr>
+                <td style="display:flex;flex-direction:column;justify-content:center;height:4.3rem">{{ i[0] }}</td>
+            </tr>
+            {% endfor %}
+            </tbody>
+        </table>
+        <!--Coluna 2-->
+        <table class="table table-hover table-active">
+            <thead>
+            <tr><th scope="col" style="height:7rem;display:flex;justify-content:center;align-items:center;">Descrição</th></tr>
+            </thead>
+            <tbody>
+            <!--Percorrer a tabela de produtos, e cada linha desta coluna estará o resultado da segunda coluna do banco de dados-->
+            {% for i in tabelaadm %}
+            <tr>
+                <td style="display:block;height:4.3rem;overflow-y:auto">{{ i[1] }}</td>
+            </tr>
+            {% endfor %}
+            </tbody>
+        </table>
+        <!--Coluna 3-->
+        <table class="table table-hover table-active">
+            <thead>
+            <tr><th scope="col" style="height:7rem;display:flex;justify-content:center;align-items:center">Valor de Venda</th></tr>
+            </thead>
+            <tbody>
+            <!--Percorrer a tabela de produtos, e cada linha desta coluna estará o resultado da terceira coluna do banco de dados-->
+            {% for i in tabelaadm %}
+            <tr>
+                <td style="display:flex;flex-direction:column;justify-content:center;height:4.3rem">{{ i[2] }}</td>
+            </tr>
+            {% endfor %}
+            </tbody>
+        </table>
+        <!--Coluna 4-->
+        <table class="table table-hover table-active">
+            <thead>
+            <tr><th scope="col" style="height:7rem;display:flex;justify-content:center;align-items:center">Valor de Compra</th></tr>
+            </thead>
+            <tbody>
+            <!--Percorrer a tabela de produtos, e cada linha desta coluna estará o resultado da quarta coluna do banco de dados-->
+            {% for i in tabelaadm %}
+            <tr>
+                <td style="display:flex;flex-direction:column;justify-content:center;height:4.3rem">{{ i[3] }}</td>
+            </tr>
+            {% endfor %}
+            </tbody>
+        </table>
+        <!--Coluna 5-->
+        <table class="table table-hover table-active">
+            <thead>
+            <tr><th scope="col" style="height:7rem;display:flex;justify-content:center;align-items:center">ID Fornecedor</th></tr>
+            </thead>
+            <tbody>
+            <!--Percorrer a tabela de produtos, e cada linha desta coluna estará o resultado da quinta coluna do banco de dados-->
+            {% for i in tabelaadm %}
+            <tr>
+                <td style="display:flex;flex-direction:column;justify-content:center;height:4.3rem">{{ i[4] }}</td>
+            </tr>
+            {% endfor %}
+            </tbody>
+        </table>
+        <!--Coluna 6-->
+        <table class="table table-hover table-active">
+            <thead>
+            <tr><th scope="col" style="height:7rem;display:flex;justify-content:center;align-items:center">Quantidade em stock</th></tr>
+            </thead>
+            <tbody>
+            <!--Percorrer a tabela de produtos, e cada linha desta coluna estará o resultado da sexta coluna do banco de dados-->
+            {% for i in tabelaadm %}
+            <tr>
+                <td style="display:flex;flex-direction:column;justify-content:center;height:4.3rem">{{ i[5] }}</td>
+            </tr>
+            {% endfor %}
+            </tbody>
+        </table>
+        <!--Coluna 7-->
+        <table class="table table-hover table-active">
+            <thead>
+            <tr><th scope="col" style="height:7rem;display:flex;justify-content:center;align-items:center">Nº compras ao Fornecedor</th></tr>
+            </thead>
+            <tbody>
+            <!--Percorrer a tabela de produtos, e cada linha desta coluna estará o resultado da sétima coluna do banco de dados-->
+            {% for i in tabelaadm %}
+            <tr>
+                <td style="display:flex;flex-direction:column;justify-content:center;height:4.3rem">{{ i[6] }}</td>
+            </tr>
+            {% endfor %}
+            </tbody>
+        </table>
+        <!--Coluna 8-->
+        <table class="table table-hover table-active">
+            <thead>
+            <tr><th scope="col" style="height:7rem;display:flex;justify-content:center;align-items:center">Nº vendas a Clientes</th></tr>
+            </thead>
+            <tbody>
+            <!--Percorrer a tabela de produtos, e cada linha desta coluna estará o resultado da oitava coluna do banco de dados-->
+            {% for i in tabelaadm %}
+            <tr>
+                <td style="display:flex;flex-direction:column;justify-content:center;height:4.3rem">{{ i[7] }}</td>
+            </tr>
+            {% endfor %}
+            </tbody>
+        </table>
+        <!--Coluna 9-->
+        <table class="table table-hover table-active">
+            <thead>
+            <tr><th scope="col" style="height:7rem;display:flex;justify-content:center;align-items:center">Quantidade solicitada</th></tr>
+            </thead>
+            <tbody>
+            <!--Percorrer a tabela de produtos, e cada linha desta coluna estará o resultado da nona coluna do banco de dados-->
+            {% for i in tabelaadm %}
+            <tr>
+                <td style="display:flex;flex-direction:column;justify-content:center;height:4.3rem">{{ i[8] }}</td>
+            </tr>
+            {% endfor %}
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>

@@ -1,0 +1,130 @@
+<!doctype html>
+<html lang="pt-PT">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>INFOTECH - Fornecedores</title>
+    <!--Link: CSS-->
+    <link rel="stylesheet" href="{{ url_for('static',filename='main.css') }}">
+    <!--Link: Bootstrap-->
+    <link rel="stylesheet" href="{{ url_for('static',filename='bootstrap.min.css') }}">
+
+</head>
+<body>
+    <!--Barra de navegação-->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="/" target="_blank">Voltar</a>
+        </div>
+    </nav>
+
+    <!--Cabeçalho-->
+    <div style="display:flex;flex-direction:column;justify-content:center;align-items:center">
+        <h1 style="padding:0;margin:1rem 0 0 0;font-size:2rem;">INFOTECH</h1><br>
+        <h2 style="padding:0;margin:0 0 1rem 0;">Equipamentos Informáticos</h2>
+        <h4 style="margin-top:2rem">Área do Fornecedor</h4>
+    </div>
+
+    <!--Produtos x Gráfico-->
+    <div>
+
+        <!--Produtos-->
+        <div id="produtos-f">
+
+
+            <!--Primeiro produto-->
+            <div id="fornecer-1" style="{% if fornecedor_login != 'fornecedor01' %} display:none; {% endif %}">
+                <a href="#" target="_blank"><img src="{{ url_for('static',filename='images/p1.png') }}" alt="Produto - Rato"/></a>
+                <p class="white"><i>RATO ASUS CERBERUS GAMING <br>MOUSE</i></p>
+                <p style="color:black !important; font-size:1.5rem;"><b>30,00€</b></p>
+                <!--Redirecionar estas informações para o método que calcula a reposição deste produto-->
+                <form action="/fornecer-RATO01" method="POST"><button type="submit" id="botao-fornecer1" class="btn btn-success">Fornecer</button></form>
+                <p style="color:white;font-weight:bold" id="fornecimento1"></p>
+            </div>
+            <!--Segundo produto-->
+            <div id="fornecer-2" style="{% if fornecedor_login != 'fornecedor01' %} display:none; {% endif %}">
+                <a href="#" target="_blank"><img src="{{ url_for('static',filename='images/p2.png') }}" alt="Produto Notebook"></a>
+                <p class="white" style="padding-top:2rem;"><i>HP ELITEBOOK 840 G8 COMPUTADOR <br>PORTÁTIL 35,6 CM (14")</i></p>
+                <p style="color:black !important;font-size:1.5rem;"><b>1390,00€</b></p>
+                <!--Redirecionar estas informações para o método que calcula a reposição deste produto-->
+                <form action="/fornecer-NOTEBOOK01" method="POST"><button type="submit" id="botao-fornecer2" class="btn btn-success">Fornecer</button></form>
+                <p style="color:white;font-weight:bold" id="fornecimento2"></p>
+            </div>
+            <!--Terceiro produto-->
+            <div id="fornecer-3" style="{% if fornecedor_login != 'fornecedor01' %} display:none; {% endif %}">
+                <a href="#" target="_blank"><img src="{{ url_for('static',filename='images/p3.png') }}" alt="Produto: Router"></a>
+                <p class="white"><i>TP-LINK TL-R605 ROUTER</i></p>
+                <p style="color:black !important;font-size:1.5rem;"><b>47,50€</b></p>
+                <!--Redirecionar estas informações para o método que calcula a reposição deste produto-->
+                <form action="/fornecer-ROUTER01" method="POST"><button type="submit" id="botao-fornecer3" class="btn btn-success">Fornecer</button></form>
+                <p style="color:white;font-weight:bold" id="fornecimento3"></p>
+            </div>
+            <!--Quarto produto-->
+            <div id="fornecer-4" style="{% if fornecedor_login != 'fornecedor01' %} display:none; {% endif %}">
+                <a href="#" target="_blank"><img src="{{ url_for('static',filename='images/p4.png') }}" alt="Produto: Monitor"></a>
+                <p class="white"><i>AOC G2 Q27G2U/BK MONITOR DE <br>ECRÃ 68,6 CM (27")</i></p>
+                <p style="color:black !important;font-size:1.5rem;"><b>333,00€</b></p>
+                <!--Redirecionar estas informações para o método que calcula a reposição deste produto-->
+                <form action="/fornecer-MONITOR01" method="POST"><button type="submit" id="botao-fornecer4" class="btn btn-success">Fornecer</button></form>
+                <p style="color:white;font-weight:bold" id="fornecimento4"></p>
+            </div>
+            <!--Quinto produto-->
+            <div id="fornecer-5" style="{% if fornecedor_login != 'fornecedor02' %} display:none; {% endif %}">
+                <a href="#" target="_blank"><img src="{{ url_for('static',filename='images/p5.png') }}" alt="Produto: Processador"></a>
+                <p class="white"><i>INTEL CORE I7-10700F <br>PROCESSADOR</i></p>
+                <p style="color:black !important;font-size:1.5rem;"><b>255,00€</b></p>
+                <!--Redirecionar estas informações para o método que calcula a reposição deste produto-->
+                <form action="/fornecer-PROCESSADOR01" method="POST"><button type="submit" id="botao-fornecer5" class="btn btn-success">Fornecer</button></form>
+                <p style="color:white;font-weight:bold" id="fornecimento5"></p>
+            </div>
+            <!--Sexto produto-->
+            <div id="fornecer-6" style="{% if fornecedor_login != 'fornecedor02' %} display:none; {% endif %}">
+                <a href="#" target="_blank"><img src="{{ url_for('static',filename='images/p6.png') }}" alt="Produto: Docas"></a>
+                <p class="white"><i>ACER NP.DCK11.01N BASE & <br>DUPLICADOR DE PORTAS</i></p>
+                <p style="color:black !important;font-size:1.5rem;"><b>388,99€</b></p>
+                <!--Redirecionar estas informações para o método que calcula a reposição deste produto-->
+                <form action="/fornecer-DOCA01" method="POST"><button type="submit" id="botao-fornecer6" class="btn btn-success">Fornecer</button></form>
+                <p style="color:white;font-weight:bold" id="fornecimento6"></p>
+            </div>
+            <!--Sétimo produto-->
+            <div id="fornecer-7" style="{% if fornecedor_login != 'fornecedor02' %} display:none; {% endif %}">
+                <a href="#" target="_blank"><img src="{{ url_for('static',filename='images/p7.png') }}" alt="Produto: Carregador Notebook"></a>
+                <p class="white"><i>TOOQ TQLC-90BS02M <br>CARREGADOR</i></p>
+                <p style="color:black !important;font-size:1.5rem;"><b>18,75€</b></p>
+                <!--Redirecionar estas informações para o método que calcula a reposição deste produto-->
+                <form action="/fornecer-CARREGADOR01" method="POST"><button type="submit" id="botao-fornecer7" class="btn btn-success">Fornecer</button></form>
+                <p style="color:white;font-weight:bold" id="fornecimento7"></p>
+            </div>
+            <!--Oitavo produto-->
+            <div id="fornecer-8" style="{% if fornecedor_login != 'fornecedor02' %} display:none; {% endif %}">
+                <a href="#" target="_blank"><img src="{{ url_for('static',filename='images/p8.png') }}" alt="Produto: Iphone"></a>
+                <p class="white"><i>APPLE IPHONE 13 MINI <br>13,7 CM (5.4")</i></p>
+                <p style="color:black !important;font-size:1.5rem;"><b>1.125,99€</b></p>
+                <!--Redirecionar estas informações para o método que calcula a reposição deste produto-->
+                <form action="/fornecer-IPHONE01" method="POST"><button type="submit" id="botao-fornecer8" class="btn btn-success">Fornecer</button></form>
+                <p style="color:white;font-weight:bold" id="fornecimento8"></p>
+            </div>
+            <!--Nono produto-->
+            <div id="fornecer-9" style="{% if fornecedor_login != 'fornecedor02' %} display:none; {% endif %}">
+                <a href="#" target="_blank"><img src="{{ url_for('static',filename='images/p9.png') }}" alt="Produto: Headsets"></a>
+                <p class="white"><i>ABKONCORE AURICULARES <br>GAMING</i></p>
+                <p style="color:black !important;font-size:1.5rem;"><b>30,00€</b></p>
+                <!--Redirecionar estas informações para o método que calcula a reposição deste produto-->
+                <form action="/fornecer-HEADSET01" method="POST"><button type="submit" id="botao-fornecer9" class="btn btn-success">Fornecer</button></form>
+                <p style="color:white;font-weight:bold" id="fornecimento9"></p>
+            </div>
+
+
+
+        </div>
+        <hr>
+        <h4 style="text-align:center;">Gestão de Produtos e Vendas</h4>
+        <!--Link que redireciona para a página de com tabela de gestão de produtos, de acordo com o fornecedor-->
+        <h4 style="text-align:center;"><a href="{% if fornecedor_login == 'fornecedor01' %} /tabela-fornecedor1 {% endif %} {% if fornecedor_login == 'fornecedor02' %} /tabela-fornecedor2 {% endif %}">Clique aqui para acessar a tabela de gestão</a></h4>
+
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,129 @@
+<!doctype html>
+<html lang="pt-PT">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>INFOTECH - Fornecedores</title>
+    <!--Link: CSS-->
+    <link rel="stylesheet" href="{{ url_for('static',filename='main.css') }}">
+    <!--Link: Bootstrap-->
+    <link rel="stylesheet" href="{{ url_for('static',filename='bootstrap.min.css') }}">
+
+</head>
+
+<body>
+
+<!--Cabeçalho-->
+<div style="display:flex;flex-direction:column;justify-content:center;align-items:center">
+    <h1 style="padding:0;margin:1rem 0 0 0;font-size:2rem;">INFOTECH</h1><br>
+    <h2 style="padding:0;margin:0 0 1rem 0;">Equipamentos Informáticos</h2>
+    <h4 style="margin-top:2rem">Área do Fornecedor</h4>
+</div>
+<!--Tabela de Gestão de Produtos e Vendas-->
+
+<div style="width:90%;height:400px;overflow:auto;display:flex;margin:auto">
+    <!--Coluna 1-->
+    <table class="table table-hover table-active">
+        <thead>
+        <tr><th scope="col" style="height:7rem;display:flex;justify-content:center;align-items:center">Código Produto</th></tr>
+        </thead>
+        <tbody>
+        <!--Percorrer banco de dados 'produtos.db' e printar informação desta coluna do banco de dados-->
+        {% for i in tabelafornecedor %}
+        <tr>
+            <td style="display:flex;flex-direction:column;justify-content:center;height:4.3rem;{% if (i[4]|string) != '1' %} display:none; {% endif %}">{{ i[0] }}</td>
+        </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+    <!--Coluna 2-->
+    <table class="table table-hover table-active">
+        <thead>
+        <tr><th scope="col" style="height:7rem;display:flex;justify-content:center;align-items:center;">Descrição</th></tr>
+        </thead>
+        <tbody>
+        <!--Percorrer banco de dados 'produtos.db' e printar informação desta coluna do banco de dados-->
+        {% for i in tabelafornecedor %}
+        <tr>
+            <td style="display:block;height:4.3rem;overflow-y:auto;{% if (i[4]|string) != '1' %} display:none; {% endif %}">{{ i[1] }}</td>
+        </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+    <!--Coluna 3-->
+    <table class="table table-hover table-active">
+        <thead>
+        <tr><th scope="col" style="height:7rem;display:flex;justify-content:center;align-items:center">Valor de Compra</th></tr>
+        </thead>
+        <tbody>
+        <!--Percorrer banco de dados 'produtos.db' e printar informação desta coluna do banco de dados-->
+        {% for i in tabelafornecedor %}
+        <tr>
+            <td style="display:flex;flex-direction:column;justify-content:center;height:4.3rem;{% if (i[4]|string) != '1' %} display:none; {% endif %}">{{ i[3] }}</td>
+        </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+    <!--Coluna 4-->
+    <table class="table table-hover table-active">
+        <thead>
+        <tr><th scope="col" style="height:7rem;display:flex;justify-content:center;align-items:center">ID Fornecedor</th></tr>
+        </thead>
+        <tbody>
+        <!--Percorrer banco de dados 'produtos.db' e printar informação desta coluna do banco de dados-->
+        {% for i in tabelafornecedor %}
+        <tr>
+            <td style="display:flex;flex-direction:column;justify-content:center;height:4.3rem;{% if (i[4]|string) != '1' %} display:none; {% endif %}">{{ i[4] }}</td>
+        </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+    <!--Coluna 5-->
+    <table class="table table-hover table-active">
+        <thead>
+        <tr><th scope="col" style="height:7rem;display:flex;justify-content:center;align-items:center">Nº compras ao Fornecedor</th></tr>
+        </thead>
+        <tbody>
+        <!--Percorrer banco de dados 'produtos.db' e printar informação desta coluna do banco de dados-->
+        {% for i in tabelafornecedor %}
+        <tr>
+            <td style="display:flex;flex-direction:column;justify-content:center;height:4.3rem;{% if (i[4]|string) != '1' %} display:none; {% endif %}">{{ i[6] }}</td>
+        </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+    <!--Coluna 6-->
+    <table class="table table-hover table-active">
+        <thead>
+        <tr><th scope="col" style="height:7rem;display:flex;justify-content:center;align-items:center">Nº vendas a Clientes</th></tr>
+        </thead>
+        <tbody>
+        <!--Percorrer banco de dados 'produtos.db' e printar informação desta coluna do banco de dados-->
+        {% for i in tabelafornecedor %}
+        <tr>
+            <td style="display:flex;flex-direction:column;justify-content:center;height:4.3rem;{% if (i[4]|string) != '1' %} display:none; {% endif %}">{{ i[7] }}</td>
+        </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+    <!--Coluna 7-->
+    <table class="table table-hover table-active">
+        <thead>
+        <tr><th scope="col" style="height:7rem;display:flex;justify-content:center;align-items:center">Quantidade solicitada</th></tr>
+        </thead>
+        <tbody>
+        <!--Percorrer banco de dados 'produtos.db' e printar informação desta coluna do banco de dados-->
+        {% for i in tabelafornecedor %}
+        <tr>
+            <td style="display:flex;flex-direction:column;justify-content:center;height:4.3rem;{% if (i[4]|string) != '1' %} display:none; {% endif %}">{{ i[8] }}</td>
+        </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+</div>
+
+
+</body>
+</html>

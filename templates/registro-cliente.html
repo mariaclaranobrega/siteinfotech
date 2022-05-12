@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="pt-PT">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Registro Clientes - INFOTECH</title>
+    <!--Link: CSS-->
+    <link rel="stylesheet" href="{{ url_for('static',filename='main.css') }}">
+    <!--Link: Bootstrap-->
+    <link rel="stylesheet" href="{{ url_for('static',filename='bootstrap.min.css') }}">
+
+</head>
+<body>
+    <!--Barra de navegação-->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="/login-clientes" target="_blank">Voltar</a>
+        </div>
+    </nav>
+
+
+    <!--Card-Bootstrap: Registro-->
+    <div class="card border-secondary mb-3" style="max-width: 40rem; margin: 0 auto;margin-top:2%;">
+        <div class="card-header"><p style="color:black;text-align:center;margin:0 auto">REGISTRE-SE</p></div>
+
+        <div class="card-body" style="display:flex;flex-direction:column;justify-content:center; align-items:center">
+
+            <!--Input nome-->
+            <form action="/registrar" method="POST" class="form-group" style="width:90%">
+                <label for="InputNameClient" class="form-label mt-4">Nome</label>
+                <input type="text" class="form-control" name="InputNameClient" id="InputNameClient" placeholder="Digite seu nome" required/>
+
+            <!--Input nif-->
+                <label for="InputNIFClient" class="form-label mt-4">NIF</label>
+                <input type="number" class="form-control" name="InputNIFClient" id="InputNIFClient" placeholder="Digite seu número de contribuinte" required/>
+
+            <!--Input telefone-->
+                <label for="InputTlmClient" class="form-label mt-4">Telefone</label>
+                <input type="number" class="form-control" name="InputTlmClient" id="InputTlmClient" placeholder="Digite seu contacto" required/>
+
+            <!--Input morada-->
+                <label for="InputAddressClient" class="form-label mt-4">Morada</label>
+                <input type="text" class="form-control" name="InputAddressClient" id="InputAddressClient" placeholder="Digite sua morada" required/>
+
+            <!--Input email-->
+                <label for="InputEmail4" class="form-label mt-4">Email</label>
+                <input type="email" class="form-control" name="InputEmail4" id="InputEmail4" placeholder="Digite um email para cadastro" required/>
+
+            <!--Input senha-->
+                <label for="InputPassword4" class="form-label mt-4">Senha</label>
+                <input type="password" class="form-control" name="InputPassword4" id="InputPassword4" placeholder="Crie uma senha" required/>
+
+                <button type="submit" style="margin: 2rem 35% 0 35%" class="btn btn-outline-light btn-block">Cadastrar</button></a>
+            </form>
+        </div>
+    </div>
+
+
+</body>
+</html>

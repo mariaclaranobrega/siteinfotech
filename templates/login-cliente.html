@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="pt-PT">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Login Clientes - INFOTECH</title>
+    <!--Link: CSS-->
+    <link rel="stylesheet" href="{{ url_for('static',filename='main.css') }}">
+    <!--Link: Bootstrap-->
+    <link rel="stylesheet" href="{{ url_for('static',filename='bootstrap.min.css') }}">
+</head>
+<body>
+    <!--Barra de navegação-->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="{{ url_for('clientes') }}" target="_blank">Voltar</a>
+            <a class="nav-link" href="/registre-se" target="_blank">Registre-se</a>
+        </div>
+    </nav>
+    <!--Card-Bootstrap: Login-->
+    <div class="card border-secondary mb-3" style="max-width: 40rem; margin: 0 auto;margin-top:2%;">
+        <div class="card-header"><p style="color:black;text-align:center;margin:0 auto">LOGIN</p></div>
+
+        <div class="card-body" style="display:flex;flex-direction:column;justify-content:center; align-items:center">
+            <h4 class="card-title">Se já tem login:</h4>
+
+            <!--Input email-->
+            <form action="/entrar/<cliente_login><cliente_senha>" method="POST" class="form-group" style="width:90%">
+                <label for="InputEmail3" class="form-label mt-4">Email</label>
+                <input type="email" class="form-control" name="InputEmail3" id="InputEmail3" placeholder="Digite o email cadastrado">
+
+            <!--Input senha-->
+                <label for="InputPassword3" class="form-label mt-4">Senha</label>
+                <input type="password" class="form-control" name="InputPassword3" id="InputPassword3" placeholder="Digite sua senha">
+
+            <button type="submit" style="margin:2rem 40% 0 40%" class="btn btn-outline-light btn-block">Entrar</button></a>
+            </form>
+            <!--Caso não tenha login-->
+            <p style="text-align:center; margin-top:5%"><i>Caso não tenha login: <a href="/registre-se" target="_blank">Registre-se aqui</a></i></p>
+        </div>
+    </div>
+
+
+
+
+
+
+
+</body>
+</html>

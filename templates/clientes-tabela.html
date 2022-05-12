@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="pt-PT">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>INFOTECH - Ranking de Vendas</title>
+    <!--Link: CSS-->
+    <link rel="stylesheet" href="{{ url_for('static',filename='main.css') }}">
+    <!--Link: Bootstrap-->
+    <link rel="stylesheet" href="{{ url_for('static',filename='bootstrap.min.css') }}">
+</head>
+<body>
+<!--Barra de navegação-->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container-fluid">
+    </div>
+</nav>
+
+<!--Cabeçalho-->
+<div style="display:flex;flex-direction:column;justify-content:center;align-items:center">
+    <h1 style="padding:0;margin:1rem 0 0 0;font-size:2rem;">INFOTECH</h1><br>
+    <h2 style="padding:0;margin:0 0 1rem 0;">Equipamentos Informáticos</h2>
+    <h4 style="margin-top:2rem">Ranking de Vendas</h4>
+</div>
+    <!--Tabela: Ranking de Vendas - Clientes-->
+    <div style="width:90%;height:400px;overflow:auto;display:flex;margin:auto">
+        <table class="table table-hover table-active">
+            <thead>
+            <!--Coluna 1-->
+            <tr><th scope="col" style="height:7rem;display:flex;justify-content:center;align-items:center;">Descrição</th></tr>
+            </thead>
+            <tbody>
+            <!--Percorrer a tabela de produtos, e cada linha desta coluna estará o resultado da segunda coluna do banco de dados-->
+            {% for i in tabelaclientes %}
+            <tr>
+                <td style="display:block;height:4.3rem;overflow-y:auto">{{ i[1] }}</td>
+            </tr>
+            {% endfor %}
+            </tbody>
+        </table>
+        <!--Coluna 2-->
+        <table class="table table-hover table-active">
+            <thead>
+            <tr><th scope="col" style="height:7rem;display:flex;justify-content:center;align-items:center">Valor</th></tr>
+            </thead>
+            <tbody>
+            <!--Percorrer a tabela de produtos, e cada linha desta coluna estará o resultado da terceira coluna do banco de dados-->
+            {% for i in tabelaclientes %}
+            <tr>
+                <td style="display:flex;flex-direction:column;justify-content:center;height:4.3rem">{{ i[2] }}</td>
+            </tr>
+            {% endfor %}
+            </tbody>
+        </table>
+        <!--Coluna 3-->
+        <table class="table table-hover table-active">
+            <thead>
+            <tr><th scope="col" style="height:7rem;display:flex;justify-content:center;align-items:center">Nº de Vendas</th></tr>
+            </thead>
+            <tbody>
+            <!--Percorrer a tabela de produtos, e cada linha desta coluna estará o resultado da oitava coluna do banco de dados-->
+            {% for i in tabelaclientes %}
+            <tr>
+                <td style="display:flex;flex-direction:column;justify-content:center;height:4.3rem">{{ i[7] }}</td>
+            </tr>
+            {% endfor %}
+            </tbody>
+        </table>
+
+    </div>
+</body>
+</html>

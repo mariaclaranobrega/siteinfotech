@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="pt-PT">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>INFOTECH - Equipamentos Informáticos</title>
+    <!--Link: CSS-->
+    <link rel="stylesheet" href="{{ url_for('static',filename='main.css') }}">
+    <!--Link: Bootstrap-->
+    <link rel="stylesheet" href="{{ url_for('static',filename='bootstrap.min.css') }}">
+
+</head>
+<body>
+
+    <div style="display:flex;flex-direction:column;align-items:center;padding:0;margin:0;">
+        <!--Cabeçalho-->
+        <div style="display:flex;flex-direction:column;justify-content:center;align-items:center">
+            <h1 style="padding:0;margin:1rem 0 0 0;font-size:2rem;">INFOTECH</h1><br>
+            <h2 style="padding:0;margin:0 0 1rem 0;">Equipamentos Informáticos</h2>
+        </div>
+            <!--Selecionar que tipo de utilizador você é-->
+
+            <!--Botão para cliente que redireciona para uma shop page (Cliente)-->
+        <div class="card border-primary mb-3" style="width: 95%;margin:1rem;max-height:10rem;display:flex;flex-direction:column;justify-content:center">
+              <div class="card-body">
+                  <h4 class="card-title" style="display:flex;justify-content:center">Se você é Cliente</h4>
+                  <form style="display:flex;justify-content:center">
+                    <a href="/clientes">
+                        <button class="btn btn-lg btn-primary" type="button" autofocus>Clique aqui</button>
+                    </a>
+                  </form>
+              </div>
+        </div>
+        <div style="width:100%; display:flex; flex=direction: row; align-items:center; justify-content: space-evenly;margin:0rem">
+            <!--Login de fornecedor-->
+            <div style="display:flex;flex-direction:column;align-items:center;margin:0">
+                <h4 style="font-size:1rem;margin:0;padding:0">Fornecedores</h4>
+                <!--Enviar esta informação para o método que checa o login do fornecedor-->
+                <form action="/fornecedores/<fornecedor_login><fornecedor_senha>" method="POST" style="display:flex;flex-direction:column;align-items:center">
+                    <div class="form-group">
+                        <label for="InputEmail1" class="form-label mt-4" style="margin-top:1.2rem !important" >Usuário</label>
+                        <input type="text" class="form-control" name="InputEmail1" id="InputEmail1" placeholder="Digite seu usuário">
+                    </div>
+                    <div class="form-group">
+                        <label for="InputPassword1" class="form-label mt-4" style="margin-top:1rem !important" >Senha</label>
+                        <input type="password" class="form-control" name="InputPassword1" id="InputPassword1" placeholder="Digite sua senha">
+                    </div>
+                    <button type="submit" style="margin-top:1rem" class="btn btn-outline-light">Entrar</button>
+                </form>
+            </div>
+            <!--Login de administrador-->
+            <div style="display:flex;flex-direction:column;align-items:center;margin:0">
+                <h4 style="font-size:1rem;margin:0;padding:0">Administrador</h4>
+                <!--Enviar esta informação para o método que checa o login da administração-->
+                <form action="/adm/<adm_login><adm_senha>" method="POST" style="display:flex;flex-direction:column;align-items:center">
+                    <div class="form-group">
+                        <label for="InputEmail2" class="form-label mt-4" style="margin-top:1.2rem !important" >Usuário</label>
+                        <input type="text" class="form-control" name="InputEmail2" id="InputEmail2" aria-describedby="emailHelp" placeholder="Digite seu usuário">
+                    </div>
+                    <div class="form-group">
+                        <label for="InputPassword2" class="form-label mt-4" style="margin-top:1rem !important" >Senha</label>
+                        <input type="password" class="form-control" name="InputPassword2" id="InputPassword2" placeholder="Digite sua senha">
+                    </div>
+                    <button style="margin-top:1rem" type="submit" class="btn btn-outline-light">Entrar</button>
+                </form>
+            </div>
+        </div>
+
+    </div>
+
+</body>
+</html>
